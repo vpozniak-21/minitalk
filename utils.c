@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vpozniak <vpozniak@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/06 20:58:22 by vpozniak          #+#    #+#             */
+/*   Updated: 2025/05/06 20:59:49 by vpozniak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk_bonus.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int result;
-	int sign;
-	int i;
+	int	result;
+	int	sign;
+	int	i;
 
 	result = 0;
 	sign = 1;
@@ -14,7 +26,7 @@ int ft_atoi(const char *str)
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i + 1] == '+' || str[i + 1] == '-' || str[i + 1] < '0' || str[i
-			+ 1] > '9')
+				+ 1] > '9')
 			return (0);
 		if (str[i] == '-')
 			sign = -1;
